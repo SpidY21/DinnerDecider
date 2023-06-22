@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">DinnerDecider</string>
+    <string name="rajma_chawal">Rajma Chawal</string>
+    <string name="app_logo">App logo</string>
+    <string name="decide">Decide!</string>
+    <string name="add_food">Add Food</string>
+    <string name="enter_food_here">Enter Food Here...</string>
 </resources>

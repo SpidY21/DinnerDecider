@@ -2,9 +2,9 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/colorAccent"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorAccent"
     tools:context=".MainActivity">
 
     <TextView
@@ -12,10 +12,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="Rajma Chawal"
+        android:text="@string/rajma_chawal"
         android:textColor="@color/black"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ddLogoImgV" />
 
@@ -26,31 +27,66 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="50dp"
         android:layout_marginEnd="8dp"
+        android:contentDescription="@string/app_logo"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/dd_logo" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/addFoodTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="176dp"
+        android:autofillHints="Add food here..."
         android:ems="10"
+        android:fontFamily="@font/muli_bold"
+        android:hint="@string/enter_food_here"
         android:inputType="textPersonName"
-        android:text="Add Food Here..."
+        android:minHeight="48dp"
+        android:textColor="@color/black"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/selectedFoodTxt" />
+        app:layout_constraintTop_toBottomOf="@+id/selectedFoodTxt"
+        tools:ignore="LabelFor" />
 
     <Button
-        android:id="@+id/btn1"
-        android:layout_width="410dp"
+        android:id="@+id/decideBtn"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="392dp"
         android:layout_height="92dp"
-        android:layout_marginTop="236dp"
-        android:text="Button"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName"
-        tools:layout_editor_absoluteX="0dp" />
+        android:layout_marginTop="8dp"
+        android:background="@color/colorPrimary"
+        android:backgroundTint="@color/colorPrimary"
+        android:fontFamily="@font/muli_bold"
+        android:text="@string/decide"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addFoodTxt"
+        app:layout_constraintVertical_bias="1.0"
+        app:strokeColor="#00BCD4"
+        tools:ignore="MissingConstraints,VisualLintButtonSize" />
+
+    <Button
+        android:id="@+id/addFoodBtn"
+        android:layout_width="224dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="70dp"
+        android:fontFamily="@font/muli_bold"
+        android:text="@string/add_food"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/decideBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addFoodTxt"
+        app:layout_constraintVertical_bias="0.097" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
